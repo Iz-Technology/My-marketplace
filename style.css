@@ -1,0 +1,496 @@
+:root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --muted: #94a3b8;
+            --accent: #06b6d4;
+            /* teal */
+            --accent-2: #7c3aed;
+            /* purple */
+            --glass: rgba(255, 255, 255, 0.04);
+            --radius: 14px;
+            --max-w: 1200px;
+            --transition: 300ms cubic-bezier(.2, .9, .3, 1);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: #e6eef6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.45;
+        }
+
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 2px;
+        }
+
+        /* NAV */
+        header {
+            position: fixed;
+            background-color: var(--bg);
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index:60
+        }
+
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* ubah dari space-between */
+            gap: 16px;
+            background: transparent;
+            padding: 12px;
+
+        }
+
+        .brand {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #042028
+        }
+
+        .brand h1 {
+            font-size: 16px;
+            margin: 0
+        }
+
+        .navbar-nav {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .navbar-nav a {
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: var(--transition)
+        }
+
+        .navbar-nav a:hover {
+            color: #fff;
+            background: var(--glass)
+        }
+
+        #hamburger-menu {
+            color: #fff;
+            display: none;
+
+
+        }
+
+        .actions {
+            display:none;
+            gap: 10px;
+            align-items: center
+        }
+
+        .btn {
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            padding: 8px 14px;
+            border-radius: 12px;
+            color: #021118;
+            font-weight: 600;
+            border: none;
+            cursor: pointer
+        }
+
+        .ghost {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 8px 12px;
+            border-radius: 12px;
+            color: var(--muted)
+        }
+
+        /* HERO */
+        .hero {
+            padding: 50px;
+            display: grid;
+            gap: 24px;
+            align-items: center;
+            margin-top: 50px
+        }
+
+        .hero-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            padding: 8px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6)
+        }
+
+        #footer {
+            display: flex;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        #footer .muted {
+          text-align: center;
+          color: #007bff;
+          justify-content: center;
+          margin: auto;
+          padding: 20px;
+        }
+
+        #about .row {
+            display: flex;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            
+        }
+
+        #about .row .map {
+            flex: 1 1 45rem;
+            width: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .eyebrow {
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.6px
+        }
+
+        .big {
+            font-size: 34px;
+            margin: 10px 0 8px
+        }
+
+        .lead {
+            color: var(--muted);
+            margin-bottom: 18px
+        }
+
+        .searchbar {
+            display: flex;
+            gap: 10px;
+            align-items: center
+        }
+
+        .searchbar input {
+            flex: 1;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: transparent;
+            color: inherit
+        }
+
+        .toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        }
+        
+
+        /* Filter dropdown */
+        .filters {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        }
+
+        .filters select {
+        padding: 8px 14px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        background: #f9f9f9;
+        font-size: 14px;
+        transition: all 0.2s ease;
+        }
+
+        .filters select:hover {
+        border-color: #007bff;
+        background: #fff;
+        }
+
+        /* Jumlah hasil */
+        .toolbar .muted {
+        color: #666;
+        font-size: 14px;
+        font-weight: 500;
+        }
+
+
+/* PRODUCTS */
+.product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+        
+
+
+
+
+.product-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(2, 6, 23, 0.5);
+            transition: transform .25s ease, box-shadow .25s ease}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  height: 180px;
+  width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #071627;
+            object-fit: cover
+}
+
+.product-card h4 {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.product-card .price {
+  color: var(--accent-2);
+  font-weight: 700;
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+.product-card button.lihatdetail {
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.product-card button.lihatdetail:hover {
+  background: #0056b3;
+}
+
+/* MODAL */
+/* backdrop modal */
+#modalBackdrop {
+  display: none; /* 🔥 penting agar tidak muncul saat reload */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px); /* efek blur di belakang modal */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+
+/* isi modal */
+.modal {
+  background: var(--bg, #fff);
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+/* isi dalamnya ditata vertikal */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* gambar utama */
+.modal-main-img {
+  width: 100%;
+  border-radius: 12px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* thumbnail */
+.modal-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.modal-thumbnails img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s;
+}
+.modal-thumbnails img:hover {
+  transform: scale(1.05);
+  border-color: var(--accent, #25D366);
+}
+
+/* teks info */
+.modal-price {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 5px;
+}
+.modal-category {
+  color: gray;
+  font-size: 14px;
+}
+.modal-desc {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+
+/* tombol */
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.modal-actions a {
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+.kembali {
+  background: #ccc;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* animasi muncul */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+
+
+@media (max-width: 480px) {
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  width: 30rem;
+  height: 40px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  
+  display: flex;
+  justify-content: flex-end; /* ⬅️ dorong semua isi ke kanan */
+  align-items: center;
+  gap: 3rem;
+  padding-right: 2rem; /* ⬅️ jarak dari sisi kanan */
+}
+
+
+  .navbar-nav.active {
+    transform: translateX(0); /* ⬅️ tampilkan */
+  }
+
+  .navbar-nav a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .navbar-nav a:hover {
+    color: #fff;
+  }
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+  
+}

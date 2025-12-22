@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My.Marketplace</title>
+    <meta name="description"
+        content="Iz-Technology — marketplace sederhana untuk smartphone dan aksesoris. Built with HTML, CSS & JavaScript." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <div class="logo">M.M</div>
+                <div>
+                    <div class="muted" style="font-size:12px;margin-top:2px">
+                        <h1>My Marketplace</h1>
+                        Kedai Runcit Bersama
+                    </div>
+                </div>
+            </div>
+
+            <ul class="navbar-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Product</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </header>
+
+
+
+
+    <!-- MAIN -->
+    <main class="container">
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-card">
+                <div class="eyebrow">HOT DEALS • Diskon minggu ini</div>
+                <h2 class="big">Memenuhi Kebutuhan keseharian dengan harga terjangkau</h2>
+                <p class="lead">Temukan barang belanja dengan pantas.</p>
+
+                <div class="searchbar" role="search">
+                    <input id="searchInput" placeholder="Cari model, brand, atau fitur..."
+                        aria-label="Search products" />
+                    <button class="btn" id="searchBtn">Cari</button>
+                </div>
+
+                <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+                    <div class="chip">Garansi distributor</div>
+                    <div class="chip">Pembayaran COD tersedia</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="products" style="margin-top:24px">
+            <div class="toolbar">
+                <div class="filters">
+                    <select id="categoryFilter" aria-label="Filter category">
+                        <option value="all">Semua Kategori</option>
+                        <option value="Food">Food</option>
+                        <option value="Non-Food">Non-Food</option>
+                        <!-- <option value="charger">Charger</option>
+                        <option value="audio">Audio</option> -->
+                    </select>
+
+                    <select id="sortSelect" aria-label="Sort products">
+                        <option value="popular">Terpopuler</option>
+                        <option value="new">Terbaru</option>
+                        <option value="price-asc">Harga: Rendah ke Tinggi</option>
+                        <option value="price-desc">Harga: Tinggi ke Rendah</option>
+                    </select>
+                </div>
+                <div class="muted"><span id="resultCount">0</span> Items</div>
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" style="margin-top:34px">
+            <div class="hero-card">
+                <h3>About Iz My.Marketplace</h3>
+                <p class="muted">My.Marketplace berdiri sejak tahun 2024. Kami mendukung penjual independen dan
+                    menyediakan
+                    pengalaman belanja sederhana dengan harga berpatutan.</p>
+            </div>
+            <div class="row">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1985.1373562144743!2d117.25465953848853!3d5.6733669985770545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sid!2smy!4v1766405322872!5m2!1sid!2smy"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="footer" style="text-align:center">
+            <div class="muted">© <span id="year"></span> My.Marketplace • Belanja Hemat, Harga Berpatutan</div>
+        </footer>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <img id="modalImage" src="" alt="Product image" class="modal-main-img">
+
+                <div id="modalThumbnails" class="modal-thumbnails"></div>
+
+                <h2 id="modalTitle"></h2>
+                <div id="modalPrice" class="modal-price"></div>
+                <div id="modalCategory" class="modal-category"></div>
+                <p id="modalDesc" class="modal-desc"></p>
+                <div id="modalSpecs"></div>
+
+                <div class="modal-actions">
+                    <a id="whatsappBtn" href="#">
+                        <span><i data-feather="phone"></i></span> WhatsApp
+                    </a>
+                    <button class="kembali" id="closeModalBtn">Kembali</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        feather.replace();
+    </script>
+    <!-- SCRIPT TERPISAH -->
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script src="script3.js"></script>
+</body>
+
+</html>
