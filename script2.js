@@ -107,7 +107,25 @@ const PRODUCTS = [
     desc: "Mengandungi 5X DHA, protein serta 20 vitamin & mineral.",
     images: ["https://down-my.img.susercontent.com/file/1aaf15ff4a083a67223b0c1dc5914faf"],
     specs: {}
-  }
+  },
+  {
+    id: 13,
+    title: "All Variant Nescafe",
+    price: "3.00",
+    category: "Food",
+    desc: "Nescafe Coffee Drink-(240ml)",
+    images: ["https://www.gvado.com/image/cache/wkseller/1165457//5f33540e5c838Screenshot_2020_08_12_at_10.24.21_AM-1000x1000.png"],
+    specs: {}
+  },
+  {
+    id: 14,
+    title: "All Variant Wonda",
+    price: "3.00",
+    category: "Food",
+    desc: "Wonda Coffee Drink-(240ml)",
+    images: ["https://down-my.img.susercontent.com/file/my-11134207-7rasm-m8ykw2hzxqlh73"],
+    specs: {}
+  },
 ];
 
 const grid = document.getElementById("productGrid");
