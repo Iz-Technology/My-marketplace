@@ -1,14 +1,67 @@
 // script2.js — Data produk dan tampilan daftar
 const PRODUCTS = [
+{
+    id: 100,
+    title: "Mi Sedaap All variant",
+    price: "5.90",
+    category: "Food",
+    // stock: 12,
+    desc: "Mie Sedaap adalah salah satu merek mie instan terkemuka yang terbuat dari bahan-bahan berkualitas dan rempah-rempah alami serta dilengkapi dengan formulasi bumbu yang tepat.",
+    images: [src="https://down-my.img.susercontent.com/file/sg-11134201-23010-6369js3viomv44",
+    ],
+            
+      specs: {
+    }
+  },
+
+  {
+    id: 1,
+    title: "Maggi Kari",
+    price: "5.90",
+    category: "Food",
+    // stock: 12,
+    desc: "MAGGI 2-Minute Noodles Curry menggunakan campuran 12 rempah khas yang membuat hidangan kari yang disukai oleh orang Malaysia. ",
+    images: [src="https://down-my.img.susercontent.com/file/my-11134207-7r98v-llx7j6x19zo3a0",
+    ],
+            
+      specs: {
+    }
+  },
+  
+  {
+    id: 2,
+    title: "Chocopie",
+    price: "4.90",
+    category: "Food",
+    // stock: 12,
+    desc: "Nikmati kelezatan Lotte Choco Pie dari kombinasi Chocolate yang berkualitas, Softcake yang lembut dan Marshmallow yang fluffy di setiap gigitannya. Snack yang pas untuk dinikmati bersama dengan keluarga anda. Lotte Choco Pie mempersembahkan Tiga Kelezatan dalam Satu Kehangatan.",
+    images: [src="https://i.pinimg.com/originals/fc/92/70/fc927056b64a7a75ef7f82ee28423a7f.jpg",
+    ],
+            
+      specs: {
+    }
+  },
+  {
+    id: 3,
+    title: "Dairy Champ 1kg",
+    price: "7.40",
+    category: "Food",
+    // stock: 12,
+    desc: "Susu kental manis",
+    images: [src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2023/1/20/a567a3bf-57d5-4a45-9eb7-f3e803d94a14.png",
+    ],
+            
+      specs: {
+    }
+  },
   {
     id: 15,
-    title: "Bauli Moonfils Starwberry",
+    title: "Bauli Moonfils All Variant",
     price: "2.00",
     category: "Food",
     // stock: 12,
     desc: "Roti dengan perisa Strawberry",
-    images: ["https://evegro.com/wp-content/uploads/2020/10/PRO_Strawberry_moonfils_2-768x398.png",
-      "https://i0.wp.com/evegro.com/wp-content/uploads/2021/08/veg-.png?fit=820%2C425&ssl=1",
+    images: [src="https://down-my.img.susercontent.com/file/my-11134207-7r990-lv21v8mbghmte9.webp",
     ],
             
       specs: {
