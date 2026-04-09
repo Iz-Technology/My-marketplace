@@ -1,7 +1,48 @@
 // script2.js — Data produk dan tampilan daftar
 const PRODUCTS = [
+  {
+    id: 1,
+    title: "Beras Wangi Cap Anggur",
+    price: "51.00",
+    category: "Food",
+    // stock: 12,
+    desc: "Pelbagai jenama Beras Putih kami menampilkan rasa unik beras import dan tempatan yang terhidang indah di pinggan anda. Teksturnya yang padat dan berderai menjadikannya padanan sempurna dengan hidangan tempatan.",
+    images: [src="https://bestamartsabah.com/wp-content/uploads/2024/07/SAZARICE-BERAS-WANGI-ANGGUR-KUNING-10KG.png",
+    ],
+            
+      specs: {
+    }
+  },
 {
-    id: 100,
+    id: 2,
+    title: "Beras super WR",
+    price: "30.00",
+    category: "Food",
+    // stock: 12,
+    desc: "Pelbagai jenama Beras Putih kami menampilkan rasa unik beras import dan tempatan yang terhidang indah di pinggan anda. Teksturnya yang padat dan berderai menjadikannya padanan sempurna dengan hidangan tempatan.",
+    images: [src="https://bestamartsabah.com/wp-content/uploads/2024/10/SAZARICE-BERAS-SUPER-WR-5-10KG.png",
+    ],
+            
+      specs: {
+    }
+  },
+
+  {
+    id: 3,
+    title: "Maggi Kari",
+    price: "5.90",
+    category: "Food",
+    // stock: 12,
+    desc: "MAGGI 2-Minute Noodles Curry menggunakan campuran 12 rempah khas yang membuat hidangan kari yang disukai oleh orang Malaysia. ",
+    images: [src="https://down-my.img.susercontent.com/file/my-11134207-7r98v-llx7j6x19zo3a0",
+    ],
+            
+      specs: {
+    }
+  },
+
+{
+    id: 4,
     title: "Mi Sedaap All variant",
     price: "5.90",
     category: "Food",
@@ -15,7 +56,7 @@ const PRODUCTS = [
   },
 
   {
-    id: 1,
+    id: 5,
     title: "Maggi Kari",
     price: "5.90",
     category: "Food",
@@ -29,7 +70,7 @@ const PRODUCTS = [
   },
   
   {
-    id: 2,
+    id: 6,
     title: "Chocopie",
     price: "4.90",
     category: "Food",
@@ -42,7 +83,7 @@ const PRODUCTS = [
     }
   },
   {
-    id: 3,
+    id: 7,
     title: "Dairy Champ 1kg",
     price: "7.40",
     category: "Food",
@@ -55,7 +96,7 @@ const PRODUCTS = [
     }
   },
   {
-    id: 15,
+    id: 8,
     title: "Bauli Moonfils All Variant",
     price: "2.00",
     category: "Food",
@@ -68,13 +109,24 @@ const PRODUCTS = [
     }
   },
   {
-    id: 14,
+    id: 9,
     title: "Sunlight",
     price: "7.90",
     category: "Non-Food",
     // stock: 12,
     desc: "Sunlight cair 700ml, Aman untuk basuh buah dan sayur",
     images: ["https://down-id.img.susercontent.com/file/id-11134207-7ras8-m1p5nn72wf1a14"],
+      specs: {
+    }
+  },
+  {
+    id: 10,
+    title: "Bio Zip 2.3kg",
+    price: "13.80",
+    category: "Non-Food",
+    // stock: 12,
+    desc: "Sunlight cair 700ml, Aman untuk basuh buah dan sayur",
+    images: ["https://down-my.img.susercontent.com/file/my-11134207-7r98u-lqleg1dvif5q37@resize_w900_nl.webp"],
       specs: {
     }
   },
