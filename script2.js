@@ -6,7 +6,7 @@ const PRODUCTS = [
     price: "51.00",
     category: "Food",
     // stock: 12,
-    desc: "Pelbagai jenama Beras Putih kami menampilkan rasa unik beras import dan tempatan yang terhidang indah di pinggan anda. Teksturnya yang padat dan berderai menjadikannya padanan sempurna dengan hidangan tempatan.",
+    desc: "Pelbagai jenama Beras Putih kami menampilkan rasa unik beras import dan tempatan yang terhidang indah di pinggan anda. ",
     images: [src="https://bestamartsabah.com/wp-content/uploads/2024/07/SAZARICE-BERAS-WANGI-ANGGUR-KUNING-10KG.png",
     ],
             
@@ -19,7 +19,7 @@ const PRODUCTS = [
     price: "30.00",
     category: "Food",
     // stock: 12,
-    desc: "Pelbagai jenama Beras Putih kami menampilkan rasa unik beras import dan tempatan yang terhidang indah di pinggan anda. Teksturnya yang padat dan berderai menjadikannya padanan sempurna dengan hidangan tempatan.",
+    desc: "Teksturnya yang padat dan berderai menjadikannya padanan sempurna dengan hidangan tempatan.",
     images: [src="https://bestamartsabah.com/wp-content/uploads/2024/10/SAZARICE-BERAS-SUPER-WR-5-10KG.png",
     ],
             
@@ -29,12 +29,13 @@ const PRODUCTS = [
 
   {
     id: 3,
-    title: "Maggi Kari",
-    price: "5.90",
+    title: "Eco Mineral Water 1L",
+    price: ["1.50/Btl",
+            "10.00/Ctn"],
     category: "Food",
     // stock: 12,
-    desc: "MAGGI 2-Minute Noodles Curry menggunakan campuran 12 rempah khas yang membuat hidangan kari yang disukai oleh orang Malaysia. ",
-    images: [src="https://down-my.img.susercontent.com/file/my-11134207-7r98v-llx7j6x19zo3a0",
+    desc: "Semestinya air yang bersih lagi menyegarkan. ",
+    images: [src="https://distribuidorabelgrano.com/wp-content/uploads/2019/09/Captura-de-pantalla-2019-09-24-a-las-02.17.58-p.m.-e1569345648371.png",
     ],
             
       specs: {
@@ -75,7 +76,7 @@ const PRODUCTS = [
     price: "4.90",
     category: "Food",
     // stock: 12,
-    desc: "Nikmati kelezatan Lotte Choco Pie dari kombinasi Chocolate yang berkualitas, Softcake yang lembut dan Marshmallow yang fluffy di setiap gigitannya. Snack yang pas untuk dinikmati bersama dengan keluarga anda. Lotte Choco Pie mempersembahkan Tiga Kelezatan dalam Satu Kehangatan.",
+    desc: "Nikmati kelezatan Choco Pie dari kombinasi Chocolate yang berkualitas, Softcake yang lembut dan Marshmallow yang fluffy di setiap gigitannya.",
     images: [src="https://i.pinimg.com/originals/fc/92/70/fc927056b64a7a75ef7f82ee28423a7f.jpg",
     ],
             
@@ -101,7 +102,7 @@ const PRODUCTS = [
     price: "2.00",
     category: "Food",
     // stock: 12,
-    desc: "Roti dengan perisa Strawberry",
+    desc: "Roti dengan pelbagai macam perisa ",
     images: [src="https://down-my.img.susercontent.com/file/my-11134207-7r990-lv21v8mbghmte9.webp",
     ],
             
@@ -130,6 +131,17 @@ const PRODUCTS = [
       specs: {
     }
   },
+  {
+    id: 11,
+    title: "Dugro 1-3 Tahun",
+    price: "23.50",
+    category: "Non-Food",
+    // stock: 12,
+    desc: "Dumex Dugro Step 3 Honey Growing Up Formula 1-3 Years (550g) (Susu, Milk Powder, 奶粉)",
+    images: ["https://down-my.img.susercontent.com/file/my-11134207-7rase-m7qbzxd7g58714.webp"],
+      specs: {
+    }
+  },
 ];
 
 const grid = document.getElementById("productGrid");
@@ -146,7 +158,13 @@ function renderProducts(items) {
       <div style="margin-top:10px">
         <div style="display:flex;justify-content:space-between;align-items:center">
             <h4>${p.title}</h4>
-            <div class="price">RM ${p.price}</div>
+            <div class="price">
+  ${
+    Array.isArray(p.price)
+      ? `RM ${p.price[0]}<br><small>RM ${p.price[1]}</small>`
+      : `RM ${p.price}`
+  }
+</div>
         </div>
             <div class="muted" style="font-size:13px;margin-top:6px">${p.desc}</div>
       </div>
@@ -184,6 +202,8 @@ function filterAndSort() {
 
   if (sort === "price-asc") filtered.sort((a, b) => a.price - b.price);
   if (sort === "price-desc") filtered.sort((a, b) => b.price - a.price);
+
+  
 
   renderProducts(filtered);
 }

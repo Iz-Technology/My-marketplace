@@ -16,7 +16,13 @@ function openModal(id) {
 
   // Isi data utama
   modalTitle.textContent = product.title;
-  modalPrice.textContent = `RM ${product.price}`;
+  modalPrice.innerHTML = `
+  ${
+    Array.isArray(product.price)
+      ? `RM ${product.price[0]}<br><small>RM ${product.price[1]}</small>`
+      : `RM ${product.price}`
+  }
+`;
 //   modalStock.textContent = product.stock;
 modalCategory.textContent = product.category;
   modalDesc.textContent = product.desc;
